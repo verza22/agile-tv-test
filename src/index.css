@@ -1,0 +1,58 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  font-size: 14px;
+}
+
+/*Colors*/
+.bg-gray {
+  background: #e5e5e5;
+}
+
+/*General*/
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.flex {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.px-16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.mx-8 {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.br-20 {
+  border-radius: 20px;
+}
+.border-bottom-1 {
+  border: 0px;
+  border-bottom: 1px;
+  border-color: #cecece;
+  border-style: solid;
+}
+.m-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/*Specials*/
+.centerSearch {
+  flex: 1;
+  align-self: center;
+  align-content: center;
+}
+.profile {
+  height: 26px;
+  width: 26px;
+}
