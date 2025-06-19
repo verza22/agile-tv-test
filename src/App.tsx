@@ -8,7 +8,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <Header />
-        <div className="centerSearch">Google</div>
+        <div className="centerSearch">Google test</div>
         <Footer />
       </div>
     );
