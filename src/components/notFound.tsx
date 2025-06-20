@@ -12,7 +12,7 @@ interface NotFoundState {
 
 class NotFound extends React.Component<NotFoundProps, NotFoundState> {
 
-    constructor(props){
+    constructor(props: NotFoundProps){
         super(props);
 
         this.state = {
@@ -22,7 +22,10 @@ class NotFound extends React.Component<NotFoundProps, NotFoundState> {
 
   render() {
     return <div>
-        <p>No results found for <b>'{this.props.search}'</b></p>
+        {
+            this.props.search !== "" &&
+            <p>No results found for <b>'{this.props.search}'</b></p>
+        }
         <p>Try looking for: <b>{this.state.result}</b></p>
     </div>
   }
