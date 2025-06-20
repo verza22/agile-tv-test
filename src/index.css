@@ -44,6 +44,18 @@ body,
 .m-auto {
   margin-top: auto;
   margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mb-16{
+  margin-bottom: 16px;
+}
+.my-8{
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.mr-16{
+  margin-right: 16px;
 }
 
 /*Specials*/
@@ -55,4 +67,80 @@ body,
 .profile {
   height: 26px;
   width: 26px;
+}
+.inputIcon{
+  height: 24px;
+  width: 24px;
+}
+.search{
+  border: 1px solid #b1b1b1;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  padding: 4px 12px;
+}
+.search input {
+  flex: 1;
+  height: 26px;
+  width: 400px;
+  font-size: 16px;
+  border: 0px;
+}
+.divSearch{
+  display: flex;
+  margin-top: 20px;
+}
+.btnSearch{
+  margin: auto;
+  font-size: 18px;
+  padding: 10px 14px;
+  border: 0px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.resultsContainer {
+  display: flex;
+  width: 100%;
+}
+.sectionA {
+  width: 70%;
+  padding: 16px;
+}
+.sectionB {
+  width: 30%;
+  padding: 16px;
+}
+.resultItem {
+  margin-bottom: 24px;
+}
+.resultUrl {
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+}
+.resultTitle {
+  margin: 4px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(59, 59, 171);
+}
+.resultDescription {
+  margin: 0;
+}
+.featureBox {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+}
+.featureImage {
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+}
+.loading{
+  background: #cecece;
+  margin-bottom: 8px;
+}
+.loadingDiv{
+  margin-bottom: 40px;
 }
