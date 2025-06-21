@@ -5,7 +5,7 @@ interface LoadingState {
 }
 
 class Loading extends Component<{}, LoadingState> {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
     this.state = {
       results: Array.from({ length: 12 }, (_, i) => i)
@@ -16,7 +16,7 @@ class Loading extends Component<{}, LoadingState> {
 
     return (
         <div className="resultsContainer">
-        {/* Sección A */}
+        {/* Section A */}
         <div className="sectionA">
           {this.state.results.map((result, index) => (
             <div key={index} className="loadingDiv">

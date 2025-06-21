@@ -52,7 +52,6 @@ class App extends React.Component<{}, AppState> {
               setEnableSearch={this.setEnableSearch}
             />
           }
-          {/*  */}
         </div>
         <Footer />
       </div>

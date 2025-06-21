@@ -7,6 +7,10 @@ interface LogoProps {
 }
 
 class Logo extends React.Component<LogoProps> {
+  static defaultProps = {
+    className: ''
+  };
+  
   render() {
     return <img 
         src="/src/assets/logo.svg" 

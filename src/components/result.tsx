@@ -43,7 +43,6 @@ class SearchResults extends Component<SearchResultsProps, SearchResultState> {
       this.setState({loading: false});
       const search = this.props.search.toLowerCase();
       const newData = data.filter(x=> x.title.toLowerCase().includes(search) || x.type.toLowerCase().includes(search));
-      debugger;
       this.setState({results: newData});
     },500);
   }
@@ -55,6 +54,10 @@ class SearchResults extends Component<SearchResultsProps, SearchResultState> {
   componentDidUpdate(prevProps: Readonly<SearchResultsProps>, prevState: Readonly<SearchResultState>, snapshot?: any): void {
     if(prevProps.search !== this.props.search)
     this.handleSearch();
+  }
+
+  overlayClick = () => {
+    this.setState({featured: null});
   }
 
   render() {
@@ -69,7 +72,7 @@ class SearchResults extends Component<SearchResultsProps, SearchResultState> {
               (this.state.results.length === 0 || this.props.search === "") ?
               <NotFound search={this.props.search} /> :
               <div className="resultsContainer">
-              {/* Sección A */}
+              {/* Section A */}
               <div className="sectionA">
                 {results.map((result, index) => (
                   <div key={index} className="resultItem">
@@ -80,19 +83,22 @@ class SearchResults extends Component<SearchResultsProps, SearchResultState> {
                 ))}
               </div>
             
-              {/* Sección B */}
+              {/* Section B */}
               {
                 featured !== null &&
-                <div className="sectionB">
-                  <div className="featureBox">
-                    {featured.image && (
-                      <img src={featured.image} alt="Featured" className="featureImage" />
-                    )}
-                    <a href={featured.url} className="resultUrl">{featured.url}</a>
-                    <h3 className="resultTitle">{featured.title}</h3>
-                    <p className="resultDescription">{featured.description}</p>
+                <>
+                  <div id="overlay" onClick={() => this.overlayClick()}></div>
+                  <div className="sectionB">
+                    <div className="featureBox">
+                      {featured.image && (
+                        <img src={featured.image} alt="Featured" className="featureImage" />
+                      )}
+                      <a href={featured.url} className="resultUrl">{featured.url}</a>
+                      <h3 className="resultTitle">{featured.title}</h3>
+                      <p className="resultDescription">{featured.description}</p>
+                    </div>
                   </div>
-                </div>
+                </>
               }
               </div>
             }

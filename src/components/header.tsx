@@ -16,7 +16,7 @@ class Header extends React.Component<HeaderProps> {
       <div className="flex px-16 border-bottom-1">
         {
           this.props.enableSearch ? 
-          <div className="flex-1 flex my-8">
+          <div id="header" className="flex-1 flex my-8">
             <div className="mr-16">
               <button className="btn-none" onClick={()=> this.props.setEnableSearch(false)}>
                 <Logo height={40} width={120} />
@@ -31,7 +31,7 @@ class Header extends React.Component<HeaderProps> {
             <b>Agile Content</b> Frontend test 
           </p>
         }
-        <div className="m-auto">
+        <div id="menuRight" className="m-auto">
           <img src="/src/assets/menu.png" className="mx-8" />
           <img src="/src/assets/profile.png" className="br-20 profile" />
         </div>

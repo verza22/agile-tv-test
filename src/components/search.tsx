@@ -7,6 +7,10 @@ interface SearchProps {
 }
 
 class Search extends React.Component<SearchProps> {
+  static defaultProps = {
+    className: ''
+  };
+  
   render() {
     return (
         <div className={"search "+this.props.className} style={{width: 400}}>
